@@ -19,7 +19,7 @@ jobs:
           persist-credentials: false
           fetch-depth: 0
       - name: Install livemark
-        run: pip install livemark
+        run: pip install livemark livemark-ckan
       - name: Install dependencies
         run: livemark run install
       - name: Update data
