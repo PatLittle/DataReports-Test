@@ -13,6 +13,7 @@ site:
     - style.css
   scripts:
     - script.js
+ckan: true
 pages:
   items:
     - path: index
