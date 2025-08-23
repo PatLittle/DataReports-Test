@@ -3,8 +3,8 @@ brand:
 about:
   text: A Livemark project template
 github:
-  user: frictionlessdata
-  repo: livemark-project
+  user: PatLittle
+  repo: DataReports-Test
 topics:
   selector: h2
 site:
