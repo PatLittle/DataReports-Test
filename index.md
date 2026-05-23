@@ -34,6 +34,18 @@ columns:
   - data: bhp
 ```
 
+## ATI Table
+
+We can visualize our data as a table using [DataTables](https://datatables.net/):
+
+```yaml table
+data: data/ati_activity.csv
+width: 600
+order:
+  - [3, 'desc']
+
+```
+
 ## Chart
 
 Another option is to draw a chart using [Vega](https://vega.github.io/vega-lite/):
