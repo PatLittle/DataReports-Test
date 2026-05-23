@@ -1,6 +1,7 @@
 import io
 import os
 from pathlib import Path
+from urllib.parse import urlparse
 
 import pandas as pd
 from azure.storage.blob import ContainerClient
@@ -22,13 +23,30 @@ def title_case_from_filename(filename: str) -> str:
     return " ".join(word.capitalize() for word in words)
 
 
+def build_container_url(container_url: str, container_name: str | None) -> str:
+    parsed = urlparse(container_url)
+    path = parsed.path.strip("/")
+
+    if path:
+        return container_url.rstrip("/")
+
+    if not container_name:
+        raise ValueError(
+            "CONTAINER_URL did not include a container path and CONTAINER_NAME was not provided. "
+            "Provide CONTAINER_URL like https://<account>.blob.core.windows.net/<container> "
+            "or set CONTAINER_NAME."
+        )
+
+    return f"{container_url.rstrip('/')}/{container_name}"
+
+
 def main() -> None:
     container_url = os.environ["CONTAINER_URL"]
     sas_token = os.environ["SAS_TOKEN"]
     container_name = os.environ.get("CONTAINER_NAME")
 
-    if container_name and container_name not in container_url:
-        print(f"Warning: CONTAINER_NAME '{container_name}' was provided but does not appear in CONTAINER_URL")
+    container_url = build_container_url(container_url, container_name)
+    sas_token = sas_token.lstrip("?")
 
     output_dir = Path("data")
     output_dir.mkdir(parents=True, exist_ok=True)
