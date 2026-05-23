@@ -19,7 +19,7 @@ pages:
     - path: index
     - path: pages/data
     - path: pages/contrib
-    - path: pages/data-tables/ati_activity
+    - path: pages/ati_activity
     - path: pages/data-tables/ati_nil_activity
     - path: pages/data-tables/briefingt_activity
     - path: pages/data-tables/briefingt_nil_activity
