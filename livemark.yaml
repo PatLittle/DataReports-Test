@@ -19,6 +19,27 @@ pages:
     - path: index
     - path: pages/data
     - path: pages/contrib
+    - path: pages/data-tables/ati_activity
+    - path: pages/data-tables/ati_nil_activity
+    - path: pages/data-tables/briefingt_activity
+    - path: pages/data-tables/briefingt_nil_activity
+    - path: pages/data-tables/consultations_activity
+    - path: pages/data-tables/contracts_activity
+    - path: pages/data-tables/contracts_nil_activity
+    - path: pages/data-tables/contractsa_activity
+    - path: pages/data-tables/dac_activity
+    - path: pages/data-tables/grants_activity
+    - path: pages/data-tables/grants_nil_activity
+    - path: pages/data-tables/hospitalityq_activity
+    - path: pages/data-tables/hospitalityq_nil_activity
+    - path: pages/data-tables/qpnotes_activity
+    - path: pages/data-tables/qpnotes_nil_activity
+    - path: pages/data-tables/reclassification_activity
+    - path: pages/data-tables/reclassification_nil_activity
+    - path: pages/data-tables/travela_activity
+    - path: pages/data-tables/travelq_activity
+    - path: pages/data-tables/travelq_nil_activity
+    - path: pages/data-tables/wrongdoing_activity
 links:
   items:
     - name: Frictionless
