@@ -10,12 +10,12 @@ CSV_FILES_TO_PROCESS = [
     "ati_activity.csv", "ati_nil_activity.csv", "briefingt_activity.csv",
     "briefingt_nil_activity.csv", "consultations_activity.csv", "contracts_activity.csv",
     "contracts_nil_activity.csv", "contractsa_activity.csv", "dac_activity.csv",
-    "grants_activity.csv", "grants_nil_activity.csv", "hospitalityq_activity.csv",
+    "grants_nil_activity.csv", "hospitalityq_activity.csv",
     "hospitalityq_nil_activity.csv", "qpnotes_activity.csv", "qpnotes_nil_activity.csv",
     "reclassification_activity.csv", "reclassification_nil_activity.csv", "travela_activity.csv",
     "travelq_activity.csv", "travelq_nil_activity.csv", "wrongdoing_activity.csv",
 ]
-
+#"grants_activity.csv", 
 
 def title_case_from_filename(filename: str) -> str:
     stem = filename.replace("_activity.csv", "").replace(".csv", "")
